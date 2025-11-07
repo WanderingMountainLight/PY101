@@ -1,0 +1,12 @@
+# Launch School PY101
+
+# Virtual environment
+lesson2/
+venv/
+.env/
+
+# macOS system files
+.DS_Store
+
+# VS Code
+.vscode/
