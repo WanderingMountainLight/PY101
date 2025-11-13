@@ -3,7 +3,7 @@ def prompt(message):
 
 def invalid_number(number_str):
     try:
-        int(number_str)
+        float(number_str)
     except ValueError:
         return True
     return False
@@ -36,13 +36,13 @@ while continue_cal:
 
     match operation:
         case '1': # '1' represents Addition
-            result = int(number1) + int(number2)
+            result = float(number1) + float(number2)
         case '2': # '2' represents Subtraction
-            result = int(number1) - int(number2)
+            result = float(number1) - float(number2)
         case '3': # '3' represents Multiplication
-            result = int(number1) * int(number2)
+            result = float(number1) * float(number2)
         case '4': # '4' represents Division
-            result = int(number1) / int(number2)
+            result = float(number1) / float(number2)
     prompt(f'The result is {result}.')
     prompt("""Would you like to perform another calculation?
            Yes or No""")
