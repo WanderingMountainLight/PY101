@@ -1,4 +1,5 @@
 {
+    "english": {
     "welcome" : "Welcome to Calculator!",
     "first_num" : "Please provide the first number.",
     "second_num" : "Please provide the second number.",
@@ -6,6 +7,35 @@
     "choose_operation" : "What operation would you like to perform? 1) Add 2) Subtract 3) Multiply 4) Divide",
     "invalid_operation" : "You must choose 1, 2, 3, or 4",
     "another_calc" : "Would you like to perform another calculation? Yes or No",
+    "yes_response" : "Yes",
+    "no_response" : "No",
     "invalid_yes_no" : "That's not a valid input. Please choose 'Yes' or 'No'.",
     "thank_you" : "Thank you for using calculator!"
+    },
+    "spanish": {
+    "welcome": "¡Bienvenido a la calculadora!",
+    "first_num" : "Por favor, proporcione el primer número.",
+    "second_num": "Por favor, proporcione el segundo número.",
+    "invalid_num": "Hmm... eso no parece un número válido.",
+    "choose_operation" : "¿Qué operación te gustaría realizar? 1) Suma 2) Resta 3) Multiplica 4) Divide",
+    "invalid_operation" : "Debe elegir 1, 2, 3 o 4",
+    "another_calc" : "¿Te gustaría realizar otro cálculo? Si o No",
+    "yes_response" : "Si",
+    "no_response" : "No",
+    "invalid_yes_no": "Esa no es una entrada válida. Por favor, elija 'Si' o 'No'.",
+    "thank_you": "¡Gracias por usar la calculadora!"
+    },
+    "portuguese":{
+    "welcome" : "Bem-vindo à Calculadora!",
+    "first_num" : "Por favor, forneça o primeiro número.",
+    "second_num" : "Por favor, forneça o segundo número.",
+    "invalid_num" : "Hmm... isso não parece um número válido.",
+    "choose_operation" : "Qual operação você gostaria de realizar? 1) Adicionar 2) Subtrair 3) Multiplicar 4) Dividir",
+    "invalid_operation" : "Você deve escolher 1, 2, 3 ou 4",
+    "another_calc" : "Você gostaria de realizar outro cálculo? Sim ou Nao",
+    "yes_response" : "Sim",
+    "no_response" : "Nao",
+    "invalid_yes_no" : "Essa não é uma entrada válida. Por favor, escolha 'Sim' ou 'Nao'.",
+    "thank_you" : "Obrigado por usar a calculadora!"
+    }
 }

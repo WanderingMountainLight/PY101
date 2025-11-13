@@ -1,7 +1,7 @@
 import json
 
 with open('calculator_messages.json', 'r') as file:
-    messages = json.load(file)
+    all_messages = json.load(file)
 
 def prompt(message):
     print(f'==> {message}')
@@ -12,6 +12,23 @@ def invalid_number(number_str):
     except ValueError:
         return True
     return False
+
+prompt("Select language: 1) English 2) Espanol 3) Português")
+lang_choice = input()
+
+while lang_choice not in ['1', '2', '3']:
+    prompt('Invalid choice. Please select 1, 2, or 3')
+    lang_choice = input()
+
+if lang_choice == '1':
+    lang = 'english'
+elif lang_choice == '2':
+    lang = 'spanish'
+elif lang_choice == '3':
+    lang = 'portuguese'
+
+messages = all_messages[lang]
+
 
 prompt(messages['welcome'])
 
@@ -52,13 +69,13 @@ while continue_cal:
     answer = input()
     answer_str = answer.title()
     
-    while answer_str not in ['Yes', 'No']:
+    while answer_str not in [messages['yes_response'], messages['no_response']]:
         prompt(messages['invalid_yes_no'])
         answer = input()
         answer_str = answer.title()
 
-    if answer_str == 'Yes':
+    if answer_str == messages['yes_response']:
         continue_cal = True
-    elif answer_str == 'No':
+    elif answer_str == messages['no_response']:
         continue_cal = False
         prompt(messages['thank_you'])
