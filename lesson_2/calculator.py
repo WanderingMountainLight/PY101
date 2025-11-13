@@ -21,13 +21,13 @@ while lang_choice not in ['1', '2', '3']:
     lang_choice = input()
 
 if lang_choice == '1':
-    lang = 'english'
+    LANG = 'english'
 elif lang_choice == '2':
-    lang = 'spanish'
+    LANG = 'spanish'
 elif lang_choice == '3':
-    lang = 'portuguese'
+    LANG = 'portuguese'
 
-messages = all_messages[lang]
+messages = all_messages[lang_choice]
 
 
 prompt(messages['welcome'])
@@ -68,8 +68,9 @@ while continue_cal:
     prompt(messages['another_calc'])
     answer = input()
     answer_str = answer.title()
-    
-    while answer_str not in [messages['yes_response'], messages['no_response']]:
+
+    while answer_str not in [messages['yes_response'],
+                             messages['no_response']]:
         prompt(messages['invalid_yes_no'])
         answer = input()
         answer_str = answer.title()
