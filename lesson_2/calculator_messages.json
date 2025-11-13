@@ -1,0 +1,11 @@
+{
+    "welcome" : "Welcome to Calculator!",
+    "first_num" : "Please provide the first number.",
+    "second_num" : "Please provide the second number.",
+    "invalid_num" : "Hmm... that doesn't look like a valid number.",
+    "choose_operation" : "What operation would you like to perform? 1) Add 2) Subtract 3) Multiply 4) Divide",
+    "invalid_operation" : "You must choose 1, 2, 3, or 4",
+    "another_calc" : "Would you like to perform another calculation? Yes or No",
+    "invalid_yes_no" : "That's not a valid input. Please choose 'Yes' or 'No'.",
+    "thank_you" : "Thank you for using calculator!"
+}

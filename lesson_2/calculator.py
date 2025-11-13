@@ -1,3 +1,8 @@
+import json
+
+with open('calculator_messages.json', 'r') as file:
+    messages = json.load(file)
+
 def prompt(message):
     print(f'==> {message}')
 
@@ -8,30 +13,29 @@ def invalid_number(number_str):
         return True
     return False
 
-prompt('Welcome to Calculator!')
+prompt(messages['welcome'])
 
 continue_cal = True
 
 while continue_cal:
-    prompt('Please provide the first number.')
+    prompt(messages['first_num'])
     number1 = input()
 
     while invalid_number(number1):
-        prompt("Hmm... that doesn't look like a valid number.")
+        prompt(messages['invalid_num'])
         number1 = input()
-    prompt('Please provide the second number.')
+    prompt(messages['second_num'])
     number2 = input()
 
     while invalid_number(number2):
-        prompt("Hmm... that doesn't look like a valid number.")
+        prompt(messages['invalid_num'])
         number2 = input()
 
-    prompt("""What operation would you like to perform?
-        1) Add 2) Subtract 3) Multiply 4) Divide""")
+    prompt(messages['choose_operation'])
     operation = input()
 
     while operation not in ['1', '2', '3','4']:
-        prompt('You must choose 1, 2, 3, or 4')
+        prompt(messages['invalid_operation'])
         operation = input()
 
     match operation:
@@ -44,13 +48,12 @@ while continue_cal:
         case '4': # '4' represents Division
             result = float(number1) / float(number2)
     prompt(f'The result is {result}.')
-    prompt("""Would you like to perform another calculation?
-           Yes or No""")
+    prompt(messages['another_calc'])
     answer = input()
     answer_str = answer.title()
-    print(answer_str)
+    
     while answer_str not in ['Yes', 'No']:
-        prompt("That's not a valid input. Please choose 'Yes' or 'No'.")
+        prompt(messages['invalid_yes_no'])
         answer = input()
         answer_str = answer.title()
 
@@ -58,4 +61,4 @@ while continue_cal:
         continue_cal = True
     elif answer_str == 'No':
         continue_cal = False
-        prompt('Thank you for using calculator')
+        prompt(messages['thank_you'])
