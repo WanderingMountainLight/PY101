@@ -4,38 +4,41 @@
     "first_num" : "Please provide the first number.",
     "second_num" : "Please provide the second number.",
     "invalid_num" : "Hmm... that doesn't look like a valid number.",
-    "choose_operation" : "What operation would you like to perform? 1) Add 2) Subtract 3) Multiply 4) Divide",
-    "invalid_operation" : "You must choose 1, 2, 3, or 4",
+    "choose_operation" : "What operation would you like to perform?\n 1) Add\n 2) Subtract\n 3) Multiply\n 4) Divide",
+    "invalid_operation" : "You must choose:\n 1) Add\n 2) Subtract\n 3) Multiply\n 4) Divide",
     "another_calc" : "Would you like to perform another calculation? Yes or No",
     "yes_response" : "Yes",
     "no_response" : "No",
     "invalid_yes_no" : "That's not a valid input. Please choose 'Yes' or 'No'.",
-    "thank_you" : "Thank you for using calculator!"
+    "thank_you" : "Thank you for using calculator!",
+    "divide_by_zero": "Cannot divide by zero.\nPlease enter a different second number:"
     },
     "spanish": {
     "welcome": "¡Bienvenido a la calculadora!",
     "first_num" : "Por favor, proporcione el primer número.",
     "second_num": "Por favor, proporcione el segundo número.",
     "invalid_num": "Hmm... eso no parece un número válido.",
-    "choose_operation" : "¿Qué operación te gustaría realizar? 1) Suma 2) Resta 3) Multiplica 4) Divide",
-    "invalid_operation" : "Debe elegir 1, 2, 3 o 4",
+    "choose_operation" : "¿Qué operación te gustaría realizar?\n 1) Suma\n 2) Resta\n 3) Multiplica\n 4) Divide",
+    "invalid_operation" : "Debe elegir:\n 1) Suma\n 2) Resta\n 3) Multiplica\n 4) Divide",
     "another_calc" : "¿Te gustaría realizar otro cálculo? Si o No",
     "yes_response" : "Si",
     "no_response" : "No",
     "invalid_yes_no": "Esa no es una entrada válida. Por favor, elija 'Si' o 'No'.",
-    "thank_you": "¡Gracias por usar la calculadora!"
+    "thank_you": "¡Gracias por usar la calculadora!",
+    "divide_by_zero": "No se puede dividir por cero. Por favor,\ningrese un segundo número diferente:"
     },
     "portuguese":{
     "welcome" : "Bem-vindo à Calculadora!",
     "first_num" : "Por favor, forneça o primeiro número.",
     "second_num" : "Por favor, forneça o segundo número.",
     "invalid_num" : "Hmm... isso não parece um número válido.",
-    "choose_operation" : "Qual operação você gostaria de realizar? 1) Adicionar 2) Subtrair 3) Multiplicar 4) Dividir",
-    "invalid_operation" : "Você deve escolher 1, 2, 3 ou 4",
+    "choose_operation" : "Qual operação você gostaria de realizar?\n 1) Adicionar\n 2) Subtrair\n 3) Multiplicar\n 4) Dividir",
+    "invalid_operation" : "Você deve escolher:\n 1) Adicionar\n 2) Subtrair\n 3) Multiplicar\n 4) Dividir",
     "another_calc" : "Você gostaria de realizar outro cálculo? Sim ou Nao",
     "yes_response" : "Sim",
     "no_response" : "Nao",
     "invalid_yes_no" : "Essa não é uma entrada válida. Por favor, escolha 'Sim' ou 'Nao'.",
-    "thank_you" : "Obrigado por usar a calculadora!"
+    "thank_you" : "Obrigado por usar a calculadora!",
+    "divide_by_zero": "Não é possível dividir por zero. Por favor,\nforneça um segundo número diferente:"
     }
 }
