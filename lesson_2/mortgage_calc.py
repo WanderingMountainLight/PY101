@@ -64,11 +64,10 @@ def main():
     while calc_loan:
 
         principle = prompt_for_positive_number(
-            'What is your principle amount?'
-            )
+            'What is your principle amount?')
 
         interest_rate = prompt_for_positive_number(
-            'What is your interest rate?'
+            'What is your interest rate? (Interest rates greater than zero required for mortgages)'
             )
 
         term = months_or_years(
