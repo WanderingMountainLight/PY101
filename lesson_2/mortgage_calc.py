@@ -1,4 +1,5 @@
 "Mortgage Calculator"
+import os
 
 def prompt(message):
     """Display a formatted message to the user"""
@@ -17,7 +18,7 @@ def cleaned_input(text):
     clean_value = text.replace(",", "").replace("$", "").replace("%", "")
     return clean_value
 
-def more_than_zero(prompt_message):
+def prompt_for_positive_number(prompt_message):
     """Validates user input, and loops if invaild input"""
     prompt(prompt_message)
     user_input = input().strip()
@@ -36,10 +37,10 @@ def months_or_years(user_term_string):
         prompt('Invaild input value. Please input Months or Years')
         user_term_string = input().strip().title()
     if user_term_string == 'Months':
-        user_term = more_than_zero('How many months?')
+        user_term = prompt_for_positive_number('How many months?')
     else:
-        user_term = more_than_zero('How many years?') * 12
-    return user_term
+        user_term = prompt_for_positive_number('How many years?') * 12
+    return int(user_term)
 
 def calc_monthly(value, apr, time):
     """Monthly payment calculation"""
@@ -47,6 +48,12 @@ def calc_monthly(value, apr, time):
     apr = apr / 12
     monthly = (value * (apr / (1 - (1 + apr) ** (-time))))
     return monthly
+
+def display_loan_summary(principle, interest_rate, monthly_payment, term):
+    prompt(f'Your principle is: ${principle:,.2f}')
+    prompt(f'Your interest rate is: {interest_rate}%')
+    prompt(f'Your loan term is: {term} months')
+    prompt(f'Your monthly payment is: ${monthly_payment:.2f}')
 
 def main():
 
@@ -56,10 +63,12 @@ def main():
 
     while calc_loan:
 
-        principle = more_than_zero('What is your principle amount?')
+        principle = prompt_for_positive_number(
+            'What is your principle amount?'
+            )
 
-        interest_rate = more_than_zero(
-            'What is your interest rate? (Ex: 5 for 5%)'
+        interest_rate = prompt_for_positive_number(
+            'What is your interest rate?'
             )
 
         term = months_or_years(
@@ -68,9 +77,8 @@ def main():
 
         monthly_payment = calc_monthly(principle, interest_rate, term)
 
-        prompt(f'Your principle is: ${principle}')
-        prompt(f'Your interst rate is: {interest_rate}%')
-        prompt(f'Your monthly payment is: ${monthly_payment:.2f}')
+        display_loan_summary(principle, interest_rate, monthly_payment, term)
+
         prompt('Would you like to calculate another loan option? Yes or No')
 
         answer = input().strip().title()
@@ -78,6 +86,9 @@ def main():
         while answer not in ['Yes', 'No']:
             prompt('This is not a valid answer. Please answer: Yes or No.')
             answer = input().strip().title()
+
+        if answer == 'Yes':
+            os.system('clear')
 
         if answer == 'No':
             prompt('Thank you for using my loan calculator!')
