@@ -72,3 +72,53 @@ print(found_dino(str2)) # True
 
 print('Dino' in str1)  # False
 print('Dino' in str2)  # True
+
+# Question 7
+
+# How can we add the family pet, "Dino", to the following list?
+
+flintstones = ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles"]
+
+flintstones.append('Dino')
+
+print(flintstones)
+
+# Question 8
+
+# In the previous problem, our first answer added 'Dino' to the list like this:
+
+
+# flintstones = ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles"]
+# flintstones.append("Dino")
+# How can we add multiple items to our list (e.g., 'Dino' and 'Hoppy')? 
+# Replace the call to append with another method invocation.
+
+flintstones = ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles"]
+
+flintstones.extend(['Dino', 'Hoppy'])
+
+print(flintstones)
+
+#Question 9
+
+# Print a new version of the sentence given by advice that ends just before the word house.
+# Don't worry about spaces or punctuation: remove everything starting from
+#  the beginning of house to the end of the sentence.
+
+advice = "Few things in life are as important as house training your pet dinosaur."
+# # Expected output:
+# # Few things in life are as important as
+
+print(advice[:-34])
+
+#or
+
+print(advice.split("house")[0])
+
+#Question 10
+
+#Print the following string with the word important replaced by urgent:
+
+advice = "Few things in life are as important as house training your pet dinosaur."
+
+print(advice.replace('important', 'urgent'))
