@@ -11,9 +11,9 @@
 
 def repeat(str, num):
     count = 0
-    while count > num:
+    while count < num:
         print(str)
         count += 1
 
 
-print(repeat('Hello', 3))
+repeat('Hello', 3)
